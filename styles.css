@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    height: 100vh;
+    position: relative;
+}
+
+.container {
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    display: inline-block;
+}
+
+label:hover,
+input[type="radio"]:checked + label {
+    background-color: #ddd;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+
+.external{
+    color: blue;
+}
+
+#tab1:checked ~ #content-tab1,
+#tab2:checked ~ #content-tab2,
+#tab3:checked ~ #content-tab3 {
+    display: block;
+}
